@@ -1,0 +1,5 @@
+ON v.visit_id = t.visit_id
+WHERE transaction_id IS NULL
+LEFT JOIN Transactions t
+FROM Visits v
+GROUP BY customer_id
